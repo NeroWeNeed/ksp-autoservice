@@ -2,10 +2,6 @@ plugins {
     kotlin("multiplatform")
     id("com.google.devtools.ksp")
 }
-
-repositories {
-    mavenCentral()
-}
 kotlin {
     jvm {
         withJava()
@@ -16,13 +12,13 @@ kotlin {
     sourceSets {
         val commonTest by getting {
             dependencies {
-                implementation(project(":annotations"))
+                implementation(project(":auto-service-annotations"))
                 implementation(kotlin("test"))
             }
         }
         val commonMain by getting {
             dependencies {
-                implementation(project(":annotations"))
+                implementation(project(":auto-service-annotations"))
             }
         }
         val jvmMain by getting {
@@ -40,6 +36,6 @@ kotlin {
     }
 }
 dependencies {
-    add("kspJvm", project(":processor"))
-    add("kspJvmTest", project(":processor"))
+    add("kspJvm", project(":auto-service-processor"))
+    add("kspJvmTest", project(":auto-service-processor"))
 }

@@ -1,7 +1,7 @@
 rootProject.name = "ksp-autoservice"
 
-include(":processor")
-include(":annotations")
+include(":auto-service-processor")
+include(":auto-service-annotations")
 include(":test")
 
 enableFeaturePreview("VERSION_CATALOGS")
