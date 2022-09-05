@@ -27,7 +27,7 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
-                implementation("com.google.auto.service:auto-service:1.0.1")
+                implementation(libs.google.auto.service)
             }
         }
         val jvmTest by getting {

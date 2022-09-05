@@ -17,9 +17,9 @@ kotlin {
         }
         val jvmMain by getting {
             dependencies {
-                implementation("com.google.devtools.ksp:symbol-processing-api:1.7.10-1.0.6")
-                implementation("com.google.auto.service:auto-service:1.0.1")
-                implementation("com.squareup:kotlinpoet:1.12.0")
+                implementation(libs.symbol.processing.api)
+                implementation(libs.google.auto.service)
+                implementation(libs.kotlinpoet)
             }
         }
         all {
