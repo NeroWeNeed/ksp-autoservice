@@ -15,7 +15,6 @@ kotlin {
         val jvmMain by getting {
             dependencies {
                 implementation(libs.symbol.processing.api)
-                implementation(libs.google.auto.service)
                 implementation(libs.kotlinpoet)
             }
         }
